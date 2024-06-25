@@ -3,7 +3,7 @@ let escolha = 2 //valores entre 1 e 3
 switch (escolha) {
     case 1:
         console.log('Escolheu 1')
-        break;
+        // break;
     case 2:
         console.log('Escolheu 2')
         // break;
