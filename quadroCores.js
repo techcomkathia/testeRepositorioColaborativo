@@ -8,3 +8,17 @@ function mudarCor(cor){
     quadro.style.background= cor
 }
 
+let elementoFilho =  document.createElement('p')
+
+elementoFilho.innerHTML = 'Texto inserido no inner html de um parágrafo cridado com o createElement do objeto document'
+
+let elementoPai = document.querySelector('body')
+
+elementoPai.appendChild(elementoFilho)
+
+let outroElementoFilho = document.createElement('h1')
+
+outroElementoFilho.innerHTML = 'Título cridado com JS'
+
+elementoPai.appendChild(outroElementoFilho)
+
