@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+     <form action="#">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+        <br>
+        <label for="peso">Peso:</label>
+        <input type="text" id="peso">
+        <br>
+        <label for="altura">Altura:</label>
+        <input type="text" id="altura">
+        <br>
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        <input onclick="calcularIMC()" type="button" value="Calcular IMC">
+     </form>
+
+     <div id="resultado">
+
+     </div>
+
+
+     <script>
+        //elementos a serem manipulados
+        let nome = document.getElementById('nome')
+        let peso= document.querySelector("#peso")
+        let altura= document.querySelector("#altura")
+        let resposta = document.querySelector('div')
+
+        function calcularIMC(){
+            let nomeUser = nome.value
+            let pesoUser = Number(peso.value)
+            let alturaUser = Number(altura.value)
+            let IMC = pesoUser / alturaUser**2
+
+            resposta.innerHTML= `<p> ${nomeUser}, seu IMC é de ${IMC.toFixed(2)}</p>`
+        }
+
+     </script>
+    
+</body>
+</html>
